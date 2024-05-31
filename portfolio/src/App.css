@@ -1,7 +1,15 @@
-body {
-  font-family: Arial, sans-serif;
+body, html {
+  height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #333;
+  color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -57,13 +65,27 @@ header nav ul li a:hover {
   animation: pulse 2s infinite alternate;
 }
 
+main {
+  flex: 1;
+  padding: 70px 20px 20px;
+}
+
 footer {
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
   text-align: center;
   width: 100%;
-  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-image {
+  max-width: 100px;
+  height: auto; 
+  margin-bottom: 10px; 
 }
 
 .profil,
@@ -79,6 +101,8 @@ footer {
   height: 40vh; 
   position: relative;
   color: white;
+  background-size: cover;
+  background-position: center;
 }
 
 .profil h2 {
@@ -87,13 +111,13 @@ footer {
 
 .background-image {
   background-size: cover;
-  background-position: center; 
-  position: absolute; 
+  background-position: center;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1; 
+  z-index: -1;
 }
 
 .content {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmileBeam } from '@fortawesome/free-regular-svg-icons';
-import backgroundImage from '../voluteFuméeViolet.jpeg';
+import backgroundImage from '../img/voluteFuméeViolet.jpeg';
 
 const Profil = () => {
     return (
