@@ -155,6 +155,15 @@ footer {
   object-fit: cover; 
 }
 
+.button-download {
+  background-color: transparent;
+  border: none;
+  color: #fff; 
+  font-size: inherit; 
+  padding: 0; 
+  cursor: pointer; 
+}
+
 .projet {
   border: 1px solid #ccc;
   border-radius: 5px;
