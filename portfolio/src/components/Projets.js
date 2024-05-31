@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projets = () => {
     return (
-        <div className="projets">
+        <div id="projets" className="projets">
             <h2>Projets</h2>
             <div className="projet">
                 <h3>Nom du Projet 1</h3>
