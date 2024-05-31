@@ -1,10 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmileBeam } from '@fortawesome/free-regular-svg-icons';
+import backgroundImage from '../voluteFuméeViolet.jpeg';
 
 const Profil = () => {
     return (
-        <div id="profil" className="profil">
+        <div id="profil" className="profil" style={{ backgroundImage: `url(${backgroundImage})` }}>
+             <div className="background-image"></div>
+            <div className="content"></div>
             <h2>
                 Bienvenue sur mon Profil
                 <FontAwesomeIcon icon={faSmileBeam} className="fa-regular bounce-icon" />

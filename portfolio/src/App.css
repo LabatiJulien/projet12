@@ -66,10 +66,6 @@ footer {
   bottom: 0;
 }
 
-main {
-  padding: 70px 20px 20px;
-}
-
 .profil,
 .projets {
   margin-bottom: 40px;
@@ -80,11 +76,28 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 35vh; 
+  height: 40vh; 
+  position: relative;
+  color: white;
 }
 
 .profil h2 {
   margin-bottom: 20px;
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center; 
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+.content {
+  z-index: 1; 
 }
 
 @keyframes bounce {
@@ -97,7 +110,7 @@ main {
 }
 
 .bounce-icon {
-  color: rgb(255, 94, 0);
+  color: rgb(234, 0, 255);
   animation: bounce 1s infinite alternate;
   margin-left: 10px;
 }
