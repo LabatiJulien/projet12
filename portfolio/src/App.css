@@ -41,12 +41,27 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.header-animation:hover {
+  animation: pulse 2s infinite alternate;
+}
+
 footer {
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
   text-align: center;
-  position: fixed;
   width: 100%;
   bottom: 0;
 }
@@ -58,6 +73,33 @@ main {
 .profil,
 .projets {
   margin-bottom: 40px;
+}
+
+.profil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35vh; 
+}
+
+.profil h2 {
+  margin-bottom: 20px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce-icon {
+  color: rgb(255, 94, 0);
+  animation: bounce 1s infinite alternate;
+  margin-left: 10px;
 }
 
 .projet {
