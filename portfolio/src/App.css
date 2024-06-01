@@ -25,7 +25,6 @@ body, html {
 }
 
 header {
-  background-color: #333;
   color: #fff;
   padding: 10px 20px;
   display: flex;
@@ -83,7 +82,6 @@ main {
 }
 
 footer {
-  background-color: #333;
   color: #fff;
   padding: 10px 20px;
   text-align: center;
@@ -174,12 +172,25 @@ footer {
   cursor: pointer; 
 }
 
+.progress-bar {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.progress {
+  background-color: rgb(169, 61, 169);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .projet {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
 }
+
 
 a {
   color: #007bff;
