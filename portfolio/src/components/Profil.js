@@ -1,13 +1,12 @@
 import React from 'react';
 import smileyImage from '../img/Smiley transmetropolitan.png';
-import backgroundImage from '../img/voluteFuméeViolet.jpeg';
 import cvPDF from '../Cv/CV_Labati_Julien.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Profil = () => {
     return (
-        <div id="profil" className="profil" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div id="profil" className="profil">
             <div className="content">
                 <h2 style={{ display: 'inline-block' }}>Bienvenue sur mon Profil</h2>
                 <img src={smileyImage} alt="Smiley" className="bounce-icon" />

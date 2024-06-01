@@ -1,9 +1,21 @@
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 body, html {
   height: 100%;
   margin: 0;
   padding: 0;
- background-color: #333;
- color: white;
+  background: url('./img/voluteFuméeViolet.jpeg') #333 repeat-x;
+  background-size: auto 150%;
+  animation: scrollBackground 120s linear infinite;
+  color: white;
+  transition: background 1s linear;
 }
 
 .App {
@@ -101,8 +113,6 @@ footer {
   height: 40vh; 
   position: relative;
   color: white;
-  background-size: cover;
-  background-position: center;
 }
 
 .profil h2 {
