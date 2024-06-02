@@ -5,12 +5,49 @@
   margin-bottom: 20px;
 }
 
+.image-container {
+  position: relative;
+}
 
-a {
-  color: #007bff;
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.modal h3 {
+  margin-top: 0;
+  margin-bottom: 20px; 
+}
+
+.modal-content {
+  max-width: 600px; 
+}
+
+.modal h4 {
+  margin-top: 20px;
+}
+
+.modal p {
+  margin: 10px 0;
+}
+
+.modal a {
+  color: white;
   text-decoration: none;
 }
 
-a:hover {
+.modal a:hover {
   text-decoration: underline;
 }
