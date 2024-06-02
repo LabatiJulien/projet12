@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Projets.css';
 import ohMyFoodImage from '../../img/oh-my-food.png';
-import argentBank from '../../img/Argent-bank.png';
+import argentBank from '../../img/argentBank.png';
 
 const Projets = () => {
     const projets = [
@@ -39,14 +39,13 @@ const Projets = () => {
     const handleImageClick = (projet, e) => {
         const imageRect = e.target.getBoundingClientRect();
         const yRelativeToImage = e.clientY - imageRect.top;
-    
+
         setSelectedProjet(projet);
         setIsModalOpen(true);
-        setModalPosition({ top: window.scrollY + imageRect.top + yRelativeToImage - 20, left: imageRect.right + 20 }); 
+        setModalPosition({ top: window.scrollY + imageRect.top + yRelativeToImage - 20, left: 20 }); 
     };
     
     
-
     const handleCloseModal = () => {
         setIsModalOpen(false);
     };
@@ -79,8 +78,9 @@ const Projets = () => {
                     className="modal"
                     style={{
                         top: modalPosition.top,
-                        left: modalPosition.left
+                        left: modalPosition.left +100
                     }}
+                    onClick={handleCloseModal}
                 >
                     <h3 style={{ textAlign: 'center' }}>{selectedProjet.nom}</h3>
                     <div className="modal-content">
