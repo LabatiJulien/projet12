@@ -10,7 +10,7 @@ const Projets = () => {
     const projets = [
         {
             nom: "Ohmyfood",
-            description: "Projet 4 OpenClassroom: Ohmyfood. J'ai conçu un menu alimentaire totalement adaptable à tous les appareils, en priorisant d'abord le mobile. J'ai développé un système de chargement ainsi que quelques animations CSS pour permettre la sélection d'un menu et l'utilisation du bouton 'j'aime'.",
+            description: "Le projet 4 d'OpenClassroom: Ohmyfood. J'ai conçu un menu alimentaire totalement adaptable à tous les appareils, en priorisant d'abord le mobile. J'ai développé un système de chargement ainsi que quelques animations CSS pour permettre la sélection d'un menu et l'utilisation du bouton 'j'aime'.",
             competences: [
                 "Capacité à créer des interfaces web mobile-first",
                 "Maîtrise de Sass pour structurer et optimiser le CSS",
@@ -21,7 +21,7 @@ const Projets = () => {
         },
         {
             nom: "ArgentBank",
-            description: "Le Projet 11 d'OpenClassroom: ArgentBank. Ma mission principale était de créer un tableau de bord utilisateur avec un système d'authentification en utilisant React et Redux, en migrant un site web existant en HTML/CSS vers cette nouvelle plateforme.",
+            description: "Le projet 11 d'OpenClassroom: ArgentBank. Ma mission principale était de créer un tableau de bord utilisateur avec un système d'authentification en utilisant React et Redux, en migrant un site web existant en HTML/CSS vers cette nouvelle plateforme.",
             competences: [
                 "Développement d'interfaces utilisateur avec React et Redux",
                 "Gestion de l'authentification et des appels API sécurisés",
