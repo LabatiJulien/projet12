@@ -1,103 +1,46 @@
-.projet {
+.carte-projet {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
+  width: calc(100% - 42px); 
   overflow: hidden; 
+  cursor: pointer; 
+  transition: all 0.3s ease;
 }
 
-.image-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.image-container img {
+.carte-projet img {
   max-width: 100%;
   height: auto;
 }
 
-.modal {
-  position: absolute;
-  background-color: #fff;
-  color: #000;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 400px;
-  max-height: 80%;
-  overflow-y: auto;
-  box-sizing: border-box;
-  z-index: 1000;
-}
-
-.modal h3 {
+.carte-projet h3 {
   margin-top: 0;
-  margin-bottom: 20px; 
+  margin-bottom: 10px;
 }
 
-.modal-content {
-  max-width: 600px; 
+.carte-projet .contenu {
+  display: none;
+  margin-top: 10px;
 }
 
-.modal h4 {
-  margin-top: 20px;
+.carte-projet.ouverte .contenu {
+  display: block;
 }
 
-.modal p {
-  margin: 10px 0;
+.carte-projet ul {
+  padding: 0;
 }
 
-.modal a {
+.carte-projet ul li {
+  list-style: none;
+}
+
+.carte-projet a {
   color: black;
   text-decoration: none;
 }
 
-.modal a:hover {
+.carte-projet a:hover {
   text-decoration: underline;
-}
-
-.modal button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #333;
-  color:white;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.modal button:hover {
-  background-color: #555;
-}
-
-
-.slick-prev {
-  left: 20px; 
-  z-index: 1; 
-}
-
-.slick-next {
-  right: 20px; 
-  z-index: 1;
-}
-
-.slick-prev,
-.slick-next {
-  font-size: 70px;
-  color: black; 
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-size: 70px; 
-  color:purple;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  color: black; 
-  background-color: transparent; 
-  border-color: transparent;
 }

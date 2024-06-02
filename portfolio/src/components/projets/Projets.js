@@ -1,13 +1,9 @@
-import React, { useState, useRef } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './Projets.css';
+import React, { useState } from 'react';
+import './Projets.css'; 
 import ohMyFoodImage from '../../img/oh-my-food.png';
 import argentBank from '../../img/argentBank.png';
 
 const Projets = () => {
-    const modalRef = useRef(null);
     const projets = [
         {
             nom: "Ohmyfood",
@@ -33,99 +29,41 @@ const Projets = () => {
         }
     ];
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedProjet, setSelectedProjet] = useState(null);
-    const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
-
-    const handleImageClick = (projet, e) => {
-        const imageRect = e.target.getBoundingClientRect();
-        const yRelativeToImage = e.clientY - imageRect.top;
-
-        setSelectedProjet(projet);
-        setIsModalOpen(true);
-        setModalPosition({ top: window.scrollY + imageRect.top + yRelativeToImage - 20, left: 20 });
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
-
-    const handleOutsideClick = (e) => {
-        if (modalRef.current && !modalRef.current.contains(e.target)) {
-            setIsModalOpen(false);
-        }
-    };
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
-
     return (
-        <div id="projets" className="projets" onClick={handleOutsideClick}>
+        <div id="projets" className="projets">
             <h2>Projets</h2>
-            <Slider {...settings} prevArrow={<CustomPrevArrow handleCloseModal={handleCloseModal} />} nextArrow={<CustomNextArrow handleCloseModal={handleCloseModal} />}>
+            <div className="cartes-projets">
                 {projets.map((projet, index) => (
-                    <div key={index} className="projet">
-                        <div
-                            className="image-container"
-                            onClick={(e) => handleImageClick(projet, e)}
-                        >
-                            <img src={projet.image} alt={projet.nom} />
-                        </div>
-                    </div>
+                    <CarteProjet key={index} projet={projet} />
                 ))}
-            </Slider>
-            {isModalOpen && selectedProjet && (
-                <div
-                    className="modal"
-                    ref={modalRef}
-                    style={{
-                        top: modalPosition.top,
-                        left: modalPosition.left + 100
-                    }}
-                    onClick={handleCloseModal}
-                >
-                    <h3 style={{ textAlign: 'center' }}>{selectedProjet.nom}</h3>
-                    <div className="modal-content">
-                        <h4>Description :</h4>
-                        <p>{selectedProjet.description}</p>
-                        <h4>Compétences développées :</h4>
-                        <ul>
-                            {selectedProjet.competences.map((competence, index) => (
-                                <li key={index}>{competence}</li>
-                            ))}
-                        </ul>
-                        <h4>Lien :</h4>
-                        <a href={selectedProjet.lien} target="_blank" rel="noopener noreferrer" style={{ marginBottom: '10px' }}>{selectedProjet.lien}</a>
-                        <button onClick={handleCloseModal}>Fermer</button>
-                    </div>
-                </div>
-            )}
+            </div>
         </div>
     );
 };
 
-const CustomPrevArrow = ({ onClick, handleCloseModal }) => {
-    const handlePrevClick = () => {
-        onClick();
-        handleCloseModal();
-    };
-    return (
-        <div className="slick-prev" onClick={handlePrevClick}></div>
-    );
-};
+const CarteProjet = ({ projet }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-const CustomNextArrow = ({ onClick, handleCloseModal }) => {
-    const handleNextClick = () => {
-        onClick();
-        handleCloseModal();
+    const toggleOpen = () => {
+        setIsOpen(!isOpen);
     };
+
     return (
-        <div className="slick-next" onClick={handleNextClick}></div>
+        <div className={`carte-projet ${isOpen ? 'ouverte' : ''}`} onClick={toggleOpen}>
+            <h3>{projet.nom}</h3>
+            <img src={projet.image} alt={projet.nom} />
+            {isOpen && (
+                <div className="contenu">
+                    <p>{projet.description}</p>
+                    <ul>
+                        {projet.competences.map((competence, index) => (
+                            <li key={index}>{competence}</li>
+                        ))}
+                    </ul>
+                    <a href={projet.lien} target="_blank" rel="noopener noreferrer">{projet.lien}</a>
+                </div>
+            )}
+        </div>
     );
 };
 
