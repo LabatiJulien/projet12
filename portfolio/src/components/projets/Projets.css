@@ -61,9 +61,9 @@
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #333;
-  color: white;
+  color:white;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -84,18 +84,19 @@
 
 .slick-prev,
 .slick-next {
-  font-size: 24px; 
-  color: white; 
+  font-size: 70px;
+  color: black; 
 }
 
 .slick-prev:before,
 .slick-next:before {
-  font-size: 24px;
+  font-size: 70px; 
+  color:purple;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  color: white; 
+  color: black; 
   background-color: transparent; 
   border-color: transparent;
 }

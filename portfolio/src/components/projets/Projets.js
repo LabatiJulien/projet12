@@ -92,7 +92,7 @@ const Projets = () => {
                             ))}
                         </ul>
                         <h4>Lien :</h4>
-                        <a href={selectedProjet.lien} target="_blank" rel="noopener noreferrer">{selectedProjet.lien}</a>
+                        <a href={selectedProjet.lien} target="_blank" rel="noopener noreferrer" style={{ marginBottom: '10px' }}>{selectedProjet.lien}</a> {/* Ajouter de la marge inférieure au lien */}
                         <button onClick={handleCloseModal}>Fermer</button>
                     </div>
                 </div>
