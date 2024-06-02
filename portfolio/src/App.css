@@ -12,8 +12,8 @@ body, html {
   margin: 0;
   padding: 0;
   background: url('./img/voluteFuméeViolet.jpeg') #333 repeat-x;
-  background-size: auto 150%;
-  animation: scrollBackground 120s linear infinite;
+  background-size: auto 220%;
+  animation: scrollBackground 250s linear infinite;
   color: white;
   transition: background 1s linear;
 }

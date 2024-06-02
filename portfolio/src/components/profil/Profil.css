@@ -1,54 +1,66 @@
 .profil {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 40vh; 
-    position: relative;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+  position: relative;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.profil .title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  margin-bottom: 20px; 
+}
+
+.profil .content {
+  width: 80%; 
+}
+
+.profil h2 {
+  margin-bottom: 20px;
+}
+
+@keyframes bounceThenRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
   }
-  
-  .profil h2 {
-    margin-bottom: 20px;
+  33% {
+    transform: translateY(-10px) rotate(0deg);
   }
-  
-  @keyframes bounceThenRotate {
-    0% {
-      transform: translateY(0) rotate(0deg);
-    }
-    33% {
-      transform: translateY(-10px) rotate(0deg);
-    }
-    66% {
-      transform: translateY(0) rotate(0deg);
-    }
-    100% {
-      transform: translateY(0) rotate(360deg);
-    }
+  66% {
+    transform: translateY(0) rotate(0deg);
   }
-  
-  .bounce-icon {
-    width: 24px; 
-    height: 24px;
-    animation: bounceThenRotate 3s infinite;
-    margin-left: 10px;
-    border: none;
-    border-radius: 50%; 
-    overflow: hidden; 
+  100% {
+    transform: translateY(0) rotate(360deg);
   }
-  
-  .bounce-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-  }
-  
-  .button-download {
-    background-color: transparent;
-    border: none;
-    color: #fff; 
-    font-size: inherit; 
-    padding: 0; 
-    cursor: pointer; 
-  }
-  
+}
+
+.bounce-icon {
+  width: 24px;
+  height: 24px;
+  animation: bounceThenRotate 3s infinite;
+  margin-left: 10px;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bounce-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button-download {
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: inherit;
+  padding: 0;
+  cursor: pointer;
+}
