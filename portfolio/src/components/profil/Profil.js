@@ -1,8 +1,9 @@
 import React from 'react';
-import smileyImage from '../img/Smiley transmetropolitan.png';
-import cvPDF from '../Cv/CV_Labati_Julien.pdf';
+import smileyImage from '../../img/Smiley transmetropolitan.png';
+import cvPDF from '../../Cv/CV_Labati_Julien.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import './Profil.css'
 
 const Profil = () => {
     return (
