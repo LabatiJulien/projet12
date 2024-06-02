@@ -19,9 +19,12 @@ const Profil = () => {
                     <h1>Bienvenue sur mon Profil</h1>
                     <img src={smileyImage} alt="Smiley" className="bounce-icon" />
                 </div>
-                <h2>Labati Julien</h2>
-                <h2>Intégrateur Web</h2>
-                <h2>Voici mon CV :
+                <p>Je suis julien Labati, Intégrateur Web. </p>
+                    <p>Mon expertise se concentre principalement sur le développement front-end, 
+                    où j'ai un réel plaisir à concevoir des interfaces utilisateurs à la fois intuitives et attrayantes. </p>
+                   <p> Après une formation intensive de 9 mois chez OpenClassrooms, j'ai acquis une solide expérience dans l'utilisation de technologies telles que React, Sass, Node.js et Redux pour créer des applications web performantes. </p>
+                    <p>Je suis constamment motivée pour m'investir dans de nouveaux projets, découvrir des technologies émergentes et collaborer avec des esprits innovants.</p>
+                <h2>Vous trouverez ici mon CV :
                     <a href={cvPDF} download>
                         <button className="button-download">
                             <FontAwesomeIcon icon={faDownload} />
@@ -29,7 +32,7 @@ const Profil = () => {
                     </a>
                 </h2>
                 <h2 className="competences-title" onClick={toggleCompetences}>
-                    Compétences
+                    Voici un résumé de mes compétences
                     <FontAwesomeIcon 
                         icon={isCompetencesOpen ? faChevronUp : faChevronDown} 
                         className="chevron-icon"

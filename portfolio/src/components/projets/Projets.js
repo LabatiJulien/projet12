@@ -37,7 +37,7 @@ const Projets = () => {
 
     return (
         <div id="projets" className="projets">
-            <h2>Projets</h2>
+            <h1>Les Projets sur lesquels j'ai pu travailler :</h1>
             <div className="cartes-projets">
                 {projets.map((projet, index) => (
                     <CarteProjet 
