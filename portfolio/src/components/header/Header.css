@@ -2,14 +2,15 @@ header {
     color: #fff;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
 }
 
 header h1 {
     margin: 0;
-    flex-grow: 1; 
-    text-align: center; 
+    flex-grow: 1;
+    text-align: center;
     font-size: 2.5rem;
 }
 
@@ -52,4 +53,25 @@ header nav ul li a:hover {
 
 .header-animation:hover {
     animation: pulse 2s infinite alternate;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
 }
