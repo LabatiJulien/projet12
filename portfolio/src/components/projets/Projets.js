@@ -20,12 +20,8 @@ const Projets = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const imageRef = useRef(null);
 
-    const handleMouseEnter = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsModalOpen(false);
+    const handleImageClick = () => {
+        setIsModalOpen(!isModalOpen);
     };
 
     const settings = {
@@ -43,8 +39,7 @@ const Projets = () => {
                 <div className="projet">
                     <div 
                         className="image-container"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                        onClick={handleImageClick}
                     >
                         <img ref={imageRef} src={ohMyFoodImage} alt={projet.nom} />
                         {isModalOpen && (
