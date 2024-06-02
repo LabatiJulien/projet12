@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   position: relative;
   color: white;
   font-size: 1.5rem;
@@ -12,12 +12,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; 
-  margin-bottom: 20px; 
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .profil .content {
-  width: 80%; 
+  width: 80%;
 }
 
 .profil h2 {
@@ -63,4 +63,46 @@
   font-size: inherit;
   padding: 0;
   cursor: pointer;
+}
+
+.competences-title {
+  cursor: pointer;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+}
+
+.chevron-icon {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.competences {
+  margin-top: 20px;
+}
+
+.competences ul {
+  padding: 0;
+}
+
+.competences ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.competences ul li p {
+  margin: 5px 0 15px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.competences ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  font-size: 1.5rem;
 }
