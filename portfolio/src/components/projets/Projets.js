@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -42,10 +42,9 @@ const Projets = () => {
 
         setSelectedProjet(projet);
         setIsModalOpen(true);
-        setModalPosition({ top: window.scrollY + imageRect.top + yRelativeToImage - 20, left: 20 }); 
+        setModalPosition({ top: window.scrollY + imageRect.top + yRelativeToImage - 20, left: 20 });
     };
-    
-    
+
     const handleCloseModal = () => {
         setIsModalOpen(false);
     };
@@ -61,7 +60,7 @@ const Projets = () => {
     return (
         <div id="projets" className="projets">
             <h2>Projets</h2>
-            <Slider {...settings}>
+            <Slider {...settings} prevArrow={<CustomPrevArrow handleCloseModal={handleCloseModal} />} nextArrow={<CustomNextArrow handleCloseModal={handleCloseModal} />}>
                 {projets.map((projet, index) => (
                     <div key={index} className="projet">
                         <div
@@ -78,7 +77,7 @@ const Projets = () => {
                     className="modal"
                     style={{
                         top: modalPosition.top,
-                        left: modalPosition.left +100
+                        left: modalPosition.left + 100
                     }}
                     onClick={handleCloseModal}
                 >
@@ -99,6 +98,26 @@ const Projets = () => {
                 </div>
             )}
         </div>
+    );
+};
+
+const CustomPrevArrow = ({ onClick, handleCloseModal }) => {
+    const handlePrevClick = () => {
+        onClick();
+        handleCloseModal();
+    };
+    return (
+        <div className="slick-prev" onClick={handlePrevClick}></div>
+    );
+};
+
+const CustomNextArrow = ({ onClick, handleCloseModal }) => {
+    const handleNextClick = () => {
+        onClick();
+        handleCloseModal();
+    };
+    return (
+        <div className="slick-next" onClick={handleNextClick}></div>
     );
 };
 
