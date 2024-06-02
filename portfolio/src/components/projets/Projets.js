@@ -29,37 +29,45 @@ const Projets = () => {
         }
     ];
 
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleOpen = (index) => {
+        setOpenIndex(index === openIndex ? null : index);
+    };
+
     return (
         <div id="projets" className="projets">
             <h2>Projets</h2>
             <div className="cartes-projets">
                 {projets.map((projet, index) => (
-                    <CarteProjet key={index} projet={projet} />
+                    <CarteProjet 
+                        key={index} 
+                        projet={projet} 
+                        isOpen={openIndex === index} 
+                        onToggle={() => toggleOpen(index)} 
+                    />
                 ))}
             </div>
         </div>
     );
 };
 
-const CarteProjet = ({ projet }) => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleOpen = () => {
-        setIsOpen(!isOpen);
-    };
-
+const CarteProjet = ({ projet, isOpen, onToggle }) => {
     return (
-        <div className={`carte-projet ${isOpen ? 'ouverte' : ''}`} onClick={toggleOpen}>
+        <div className={`carte-projet ${isOpen ? 'ouverte' : ''}`} onClick={onToggle}>
             <h3>{projet.nom}</h3>
-            <img src={projet.image} alt={projet.nom} />
+            <img src={projet.image} alt={projet.nom} className="projet-image" />
             {isOpen && (
                 <div className="contenu">
+                    <h4>Description</h4>
                     <p>{projet.description}</p>
+                    <h4>Compétences développées</h4>
                     <ul>
                         {projet.competences.map((competence, index) => (
                             <li key={index}>{competence}</li>
                         ))}
                     </ul>
+                    <h4>Lien</h4>
                     <a href={projet.lien} target="_blank" rel="noopener noreferrer">{projet.lien}</a>
                 </div>
             )}
