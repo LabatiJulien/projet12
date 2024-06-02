@@ -7,6 +7,15 @@
 
 .image-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ajoutez ceci si vous souhaitez que le conteneur ait une hauteur fixe */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 .modal {
