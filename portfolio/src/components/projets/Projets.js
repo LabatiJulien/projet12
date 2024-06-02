@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -7,6 +7,7 @@ import ohMyFoodImage from '../../img/oh-my-food.png';
 import argentBank from '../../img/argentBank.png';
 
 const Projets = () => {
+    const modalRef = useRef(null);
     const projets = [
         {
             nom: "Ohmyfood",
@@ -49,6 +50,12 @@ const Projets = () => {
         setIsModalOpen(false);
     };
 
+    const handleOutsideClick = (e) => {
+        if (modalRef.current && !modalRef.current.contains(e.target)) {
+            setIsModalOpen(false);
+        }
+    };
+
     const settings = {
         dots: true,
         infinite: true,
@@ -58,7 +65,7 @@ const Projets = () => {
     };
 
     return (
-        <div id="projets" className="projets">
+        <div id="projets" className="projets" onClick={handleOutsideClick}>
             <h2>Projets</h2>
             <Slider {...settings} prevArrow={<CustomPrevArrow handleCloseModal={handleCloseModal} />} nextArrow={<CustomNextArrow handleCloseModal={handleCloseModal} />}>
                 {projets.map((projet, index) => (
@@ -75,6 +82,7 @@ const Projets = () => {
             {isModalOpen && selectedProjet && (
                 <div
                     className="modal"
+                    ref={modalRef}
                     style={{
                         top: modalPosition.top,
                         left: modalPosition.left + 100
@@ -92,7 +100,7 @@ const Projets = () => {
                             ))}
                         </ul>
                         <h4>Lien :</h4>
-                        <a href={selectedProjet.lien} target="_blank" rel="noopener noreferrer" style={{ marginBottom: '10px' }}>{selectedProjet.lien}</a> {/* Ajouter de la marge inférieure au lien */}
+                        <a href={selectedProjet.lien} target="_blank" rel="noopener noreferrer" style={{ marginBottom: '10px' }}>{selectedProjet.lien}</a>
                         <button onClick={handleCloseModal}>Fermer</button>
                     </div>
                 </div>
