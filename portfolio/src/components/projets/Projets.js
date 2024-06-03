@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ohMyFoodImage from '../../img/oh-my-food.png';
 import argentBank from '../../img/argentBank.png';
-import kasa from '../../img/kasa.png'
-import sophieBluel from '../../img/sophie-bluel.png'
-import './Projets.css'; 
+import kasa from '../../img/kasa.png';
+import sophieBluel from '../../img/sophie-bluel.png';
+import './Projets.css';
 
 const Projets = () => {
     const projets = [
@@ -54,9 +54,38 @@ const Projets = () => {
     ];
 
     const [openIndex, setOpenIndex] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIfMobile = () => {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const mobile = /android|iPad|iPhone|iPod/.test(userAgent.toLowerCase());
+            const smallScreen = window.matchMedia("(max-width: 768px)").matches;
+            setIsMobile(mobile || smallScreen);
+        };
+
+        checkIfMobile();
+        window.addEventListener('resize', checkIfMobile);
+
+        return () => {
+            window.removeEventListener('resize', checkIfMobile);
+        };
+    }, []);
 
     const handleCardClick = (index) => {
         setOpenIndex(index === openIndex ? null : index);
+    };
+
+    const handleCardMouseEnter = (index) => {
+        if (!isMobile) {
+            setOpenIndex(index);
+        }
+    };
+
+    const handleCardMouseLeave = (index) => {
+        if (!isMobile) {
+            setOpenIndex(openIndex === index ? null : openIndex);
+        }
     };
 
     return (
@@ -64,11 +93,13 @@ const Projets = () => {
             <h1>Les Projets sur lesquels j'ai pu travailler :</h1>
             <div className="cartes-projets">
                 {projets.map((projet, index) => (
-                    <CarteProjet 
-                        key={index} 
-                        projet={projet} 
-                        isOpen={openIndex === index} 
+                    <CarteProjet
+                        key={index}
+                        projet={projet}
+                        isOpen={openIndex === index}
                         onClick={() => handleCardClick(index)}
+                        onMouseEnter={() => handleCardMouseEnter(index)}
+                        onMouseLeave={() => handleCardMouseLeave(index)}
                     />
                 ))}
             </div>
@@ -76,16 +107,18 @@ const Projets = () => {
     );
 };
 
-const CarteProjet = ({ projet, isOpen, onClick }) => {
+const CarteProjet = ({ projet, isOpen, onClick, onMouseEnter, onMouseLeave }) => {
     const handleCardClick = (e) => {
-        e.stopPropagation(); 
+        e.stopPropagation();
         onClick();
     };
 
     return (
-        <div 
-            className={`carte-projet ${isOpen ? 'ouverte' : ''}`} 
+        <div
+            className={`carte-projet ${isOpen ? 'ouverte' : ''}`}
             onClick={handleCardClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
         >
             <h3>{projet.nom}</h3>
             <img src={projet.image} alt={projet.nom} className="projet-image" />
