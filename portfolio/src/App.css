@@ -16,6 +16,7 @@ html, body {
   animation: scrollBackground 250s linear infinite;
   color: white;
   transition: background 1s linear;
+  font-weight: bold;
 }
 
 #root {

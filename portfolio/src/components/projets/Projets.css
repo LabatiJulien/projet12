@@ -55,6 +55,7 @@
 .carte-projet a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .carte-projet a:hover {
