@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Projets.css'; 
 import ohMyFoodImage from '../../img/oh-my-food.png';
 import argentBank from '../../img/argentBank.png';
+import kasa from '../../img/kasa.png'
 
 const Projets = () => {
     const projets = [
@@ -26,6 +27,17 @@ const Projets = () => {
             ],
             lien: "https://github.com/LabatiJulien/ArgentBank-website.git",
             image: argentBank
+        },
+        {
+            nom: "Kasa",
+            description: "Le projet 8 d'OpenClassroom: Kasa. Mon rôle consistait à concevoir une nouvelle plateforme web en utilisant React pour la partie front-end et Node.js pour le back-end, en m'appuyant sur les maquettes fournies par le designer.",
+            competences: [
+                "- Maîtrise de React",
+                "- Compétence en Node.js",
+                "- Capacité à travailler avec des maquettes "
+            ],
+            lien: "https://github.com/LabatiJulien/kasa.git",
+            image: kasa
         }
     ];
 
