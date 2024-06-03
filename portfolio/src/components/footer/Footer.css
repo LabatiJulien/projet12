@@ -1,17 +1,33 @@
 footer {
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-image {
+  max-width: 100px;
+  height: auto; 
+  margin-bottom: 10px; 
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none; 
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    padding: 20px;
   }
-  
-  .footer-image {
-    max-width: 100px;
-    height: auto; 
-    margin-bottom: 10px; 
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    padding: 30px;
   }
-  
+}
