@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ohMyFoodImage from '../../img/oh-my-food.png';
 import argentBank from '../../img/argentBank.png';
 import kasa from '../../img/kasa.png'
-import sophieBluel from '../../img/kasa.png'
+import sophieBluel from '../../img/sophie-bluel.png'
 import './Projets.css'; 
 
 const Projets = () => {
