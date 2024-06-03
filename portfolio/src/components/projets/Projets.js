@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ohMyFoodImage from '../../img/oh-my-food.png';
 import argentBank from '../../img/argentBank.png';
 import kasa from '../../img/kasa.png'
+import sophieBluel from '../../img/kasa.png'
 import './Projets.css'; 
 
 const Projets = () => {
@@ -38,6 +39,17 @@ const Projets = () => {
             ],
             lien: "https://github.com/LabatiJulien/kasa.git",
             image: kasa
+        },
+        {
+            nom: "Sophie Bluel",
+            description: "Le projet 6 d'OpenClassroom: Sophie Bluel. Mon rôle a impliqué la conception de la page de présentation des travaux de l'architecte, offrant des options de filtrage par catégorie. De plus, j'ai développé la page de connexion sécurisée de l'administrateur en utilisant JWT (JSON Web Tokens) pour l'authentification. J'ai également conçu une modale permettant à l'architecte d'ajouter ou de supprimer des projets.",
+            competences: [
+                "- Développement Frontend",
+                "- Gestion de l'Authentification",
+                "- Intégration avec une API"
+            ],
+            lien: "https://github.com/LabatiJulien/Portfolio-architecte-sophie-bluel.git",
+            image: sophieBluel
         }
     ];
 
