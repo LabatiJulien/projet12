@@ -12,7 +12,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: url('./img/voluteFuméeViolet.jpeg') #333 repeat-x;
-  background-size: auto 310%;
+  background-size: auto 365%;
   animation: scrollBackground 250s linear infinite;
   color: white;
   transition: background 1s linear;
