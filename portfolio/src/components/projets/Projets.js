@@ -55,7 +55,7 @@ const Projets = () => {
 
     const [openIndex, setOpenIndex] = useState(null);
 
-    const toggleOpen = (index) => {
+    const handleCardClick = (index) => {
         setOpenIndex(index === openIndex ? null : index);
     };
 
@@ -68,7 +68,7 @@ const Projets = () => {
                         key={index} 
                         projet={projet} 
                         isOpen={openIndex === index} 
-                        onToggle={() => toggleOpen(index)} 
+                        onClick={() => handleCardClick(index)}
                     />
                 ))}
             </div>
@@ -76,9 +76,17 @@ const Projets = () => {
     );
 };
 
-const CarteProjet = ({ projet, isOpen, onToggle }) => {
+const CarteProjet = ({ projet, isOpen, onClick }) => {
+    const handleCardClick = (e) => {
+        e.stopPropagation(); 
+        onClick();
+    };
+
     return (
-        <div className={`carte-projet ${isOpen ? 'ouverte' : ''}`} onClick={onToggle}>
+        <div 
+            className={`carte-projet ${isOpen ? 'ouverte' : ''}`} 
+            onClick={handleCardClick}
+        >
             <h3>{projet.nom}</h3>
             <img src={projet.image} alt={projet.nom} className="projet-image" />
             {isOpen && (

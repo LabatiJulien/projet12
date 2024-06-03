@@ -2,8 +2,8 @@ import React from 'react';
 
 const SEO = () => {
   return (
-    <head>
-      <meta charset="UTF-8" />
+    <>
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Portfolio de Julien Labati - Développeur Web</title>
       <meta name="description" content="Découvrez le portfolio de Julien Labati, développeur web passionné par la création d'applications web modernes et performantes." />
@@ -25,9 +25,7 @@ const SEO = () => {
       <meta name="twitter:description" content="Découvrez le portfolio de Julien Labati, développeur web passionné par la création d'applications web modernes et performantes." />
       <meta name="twitter:image" content="URL_DE_L_IMAGE_POUR_L_APERCU" />
       
-      {/* CSS */}
-      <link rel="stylesheet" href="styles.css" />
-    </head>
+    </>
   );
 };
 
