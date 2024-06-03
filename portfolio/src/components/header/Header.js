@@ -4,7 +4,7 @@ import './Header.css'
 const Header = () => {
     return (
         <header>
-            <h1 className="header-animation">Mon Portfolio Coucou ma gueule</h1>
+            <h1 className="header-animation">Mon Portfolio</h1>
             <nav>
                 <ul>
                     <li className="header-animation"><a href="#profil">Profil</a></li>
