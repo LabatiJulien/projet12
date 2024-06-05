@@ -19,7 +19,7 @@ const Profil = () => {
                     <h1>Bienvenue sur mon Profil</h1>
                     <img src={smileyImage} alt="Smiley" className="bounce-icon" />
                 </div>
-                <p>Je suis julien Labati, Intégrateur Web. </p>
+                <p>Je suis Julien Labati, Intégrateur Web. </p>
                     <p>Mon expertise se concentre principalement sur le développement front-end, 
                     où j'ai un réel plaisir à concevoir des interfaces utilisateurs à la fois intuitives et attrayantes. </p>
                    <p> Après une formation intensive de 9 mois chez OpenClassrooms, j'ai acquis une solide expérience dans l'utilisation de technologies telles que React, Sass, Node.js et Redux pour créer des applications web performantes. </p>
