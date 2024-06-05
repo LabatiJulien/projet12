@@ -43,3 +43,9 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 768px) {
+  html, body {
+    background-size: auto 450%;
+  }
+}
