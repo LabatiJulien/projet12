@@ -84,13 +84,17 @@
 
 .competences ul {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .competences ul li {
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   position: relative;
   padding-left: 20px;
+  width: 50%; 
+  box-sizing: border-box; 
 }
 
 .competences ul li p {
@@ -119,6 +123,10 @@
 
   .competences-title {
     font-size: 1.2rem; 
+  }
+
+  .competences ul li {
+    width: 100%; 
   }
 
   .competences ul li p {

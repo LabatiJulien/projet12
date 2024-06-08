@@ -10,7 +10,7 @@ const SEO = () => {
       <meta name="keywords" content="portfolio, développeur web, web design, développement front-end, développement back-end" />
       
       {/* Google Snippet */}
-      <meta name="google-site-verification" content="VOTRE_CODE_DE_VERIFICATION" />
+      <meta name="google-site-verification" content="qjJEQsoMznEFNOeBYyoztDriEbWspTq5ponbE-SaGGo" />
       
       {/* Balises Open Graph pour Facebook */}
       <meta property="og:title" content="Portfolio de Julien Labati - Développeur Web" />
