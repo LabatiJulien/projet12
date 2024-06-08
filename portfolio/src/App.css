@@ -12,7 +12,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: url('./img/voluteFuméeViolet.jpeg') #333 repeat-x;
-  background-size: auto 365%;
+  background-size: auto 460%;
   animation: scrollBackground 250s linear infinite;
   color: white;
   transition: background 1s linear;
@@ -46,6 +46,6 @@ main {
 
 @media (max-width: 768px) {
   html, body {
-    background-size: auto 450%;
+    background-size: auto 650%;
   }
 }
