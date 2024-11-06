@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import smileyImage from '../../img/Smiley transmetropolitan.png';
-import cvPDF from '../../Cv/CV_Labati_Julien.pdf';
+import cvPDF from '../../Cv/Cv Intégrateur Web.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './Profil.css';
